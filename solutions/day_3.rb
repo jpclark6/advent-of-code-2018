@@ -3,7 +3,7 @@ input.map! { |line| line.chomp }
 
 starting = Time.now
 
-ary_size = 1100
+ary_size = 1001
 grid = Array.new(ary_size) {Array.new(ary_size, 0)}
 
 input.each do |line|
@@ -62,7 +62,7 @@ end
 ending = Time.now
 
 
-puts "Day1 Part1: #{part_1}\nDay1 Part2: #{part_2}"
-puts "Total part1: #{ending - starting} seconds"
-puts "Day1 Part1 time: #{middle - starting}"
-puts "Day2 Part2 time: #{ending - middle}"
+puts "Day3 Part1: #{part_1}\nDay3 Part2: #{part_2}"
+puts "Day3 Total Time: #{ending - starting} seconds"
+puts "Day3 Part1 time: #{middle - starting}"
+puts "Day3 Part2 time: #{ending - middle}"

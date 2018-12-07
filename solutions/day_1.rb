@@ -33,6 +33,6 @@ after_2 = ending - a1
 tot_time = ending-starting
 
 puts "Day1 Part1: #{answer_1}\nDay1 Part2: #{answer_2}"
-puts "Total part1: #{tot_time} seconds"
+puts "Day1 Total Time: #{tot_time} seconds"
 puts "Day1 Part1 time: #{after_1}"
-puts "Day2 Part2 time: #{after_2}"
+puts "Day1 Part2 time: #{after_2}"
