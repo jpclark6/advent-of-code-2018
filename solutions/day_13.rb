@@ -108,7 +108,7 @@ def move_forward(cart_info, input)
       if next_loc == cart_check[:loc] && active_carts.index(cart[:cart_num]) && active_carts.index(cart_check[:cart_num])
         active_carts.delete(cart[:cart_num])
         active_carts.delete(cart_check[:cart_num])
-        puts "Collision at #{cart_check[:loc]} between cart #{cart[:cart_num]} and cart #{cart_check[:cart_num]}"
+        # UNCOMMENT FOR PART 1 SOLUTION puts "Collision at #{cart_check[:loc]} between cart #{cart[:cart_num]} and cart #{cart_check[:cart_num]}"
         break
       end
     end
@@ -119,7 +119,7 @@ def move_forward(cart_info, input)
                 dir: cart_direction, intersections: intersections,
                 }
   end
-  
+
   if active_carts.length == 1
     carts.each do |final_check|
       puts "Final location at #{final_check[:loc]}" if final_check[:cart_num] == active_carts[0]
@@ -162,5 +162,8 @@ iterations = 0
 until cart_info[:active_carts].length <= 1
   iterations += 1
   cart_info = move_forward(cart_info, input)
-  # print_map(cart_info, input)
+  start_time = Time.now
+  print_map(cart_info, input)
+  until Time.now > start_time + 0.1
+  end
 end
