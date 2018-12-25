@@ -48,6 +48,7 @@ class Sky
       min_x = find_mins(@points)[0]
       min_y = find_mins(@points)[1]
     end
+    map_sky
     @points.each { |point| point.move_back }
     @total_time -= 1
     map_sky
